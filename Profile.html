@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Samip Lamichhane | Portfolio</title>
+
+    <!-- This links the external CSS file -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="site-header">
+        <h1 class="site-title">Samip Lamichhane</h1>
+
+        <!-- Nav links jump to sections on the same page -->
+        <nav class="main-nav">
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- About section with photo -->
+        <section id="about" class="section about">
+            <h2>About Me</h2>
+
+            <!-- Profile photo. -->
+            <img class="profile-img" src="sajan.png"
+                 alt="Samip Lamichhane profile photo"
+                 width="200" height="200">
+
+            <p>I am a student at International American University.
+               I am learning <strong>Web Design and Development</strong>.
+               I like building websites and <em>must</em> finish my portfolio.</p>
+        </section>
+
+        <!-- Skills section uses a description list -->
+        <section id="skills" class="section skills">
+            <h2>Technical Skills</h2>
+            <dl class="skills-list">
+                <dt>HTML5</dt>
+                <dd>Semantic structure and accessibility</dd>
+
+                <dt>CSS3</dt>
+                <dd>Layout, color, and responsive design</dd>
+
+                <dt>JavaScript</dt>
+                <dd>DOM manipulation and interactivity</dd>
+            </dl>
+        </section>
+
+        <!-- Projects section with two cards -->
+        <section id="projects" class="section projects">
+            <h2>Projects</h2>
+
+            <div class="project-grid">
+
+                <!-- Each project is an article because it stands alone -->
+                <article class="project-card">
+                    <h3>Personal Portfolio</h3>
+                    <p>A single-page portfolio built with semantic HTML5 and CSS.</p>
+                    <a href="https://github.com/lolsamm/MIT-assignment-CSE230"
+                       target="_blank" rel="noopener">View Repository</a>
+                </article>
+            </div>
+        </section>
+
+        <!-- Contact form. Every label matches an input id -->
+        <section id="contact" class="section contact">
+            <h2>Contact Me</h2>
+
+            <form class="contact-form" action="/submit" method="post">
+
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+
+                <button type="submit">Send</button>
+
+            </form>
+        </section>
+
+    </main>
+
+    <!-- Footer with copyright and GitHub link -->
+    <footer class="site-footer">
+        <p>&copy; 2026 Samip Lamichhane</p>
+        <a href="https://github.com/lolsamm">GitHub</a>
+    </footer>
+
+</body>
+
+</html>

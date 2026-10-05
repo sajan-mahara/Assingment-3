@@ -1,0 +1,226 @@
+/* Remove default spacing and make sizing predictable */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Main page font and background */
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: #f4f7fb;
+    color: #1f2937;
+    line-height: 1.6;
+}
+
+/* ===== Header ===== */
+/* Flexbox puts the name on the left and nav on the right */
+.site-header {
+    background-color: #0b3d91;
+    color: #ffffff;
+    padding: 1.2rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.site-title {
+    font-size: 1.6rem;
+    letter-spacing: 1px;
+}
+
+/* Nav links in a row */
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.main-nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1rem;
+    padding-bottom: 3px;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.2s;
+}
+
+/* Small underline on hover */
+.main-nav a:hover {
+    border-bottom-color: #ffffff;
+}
+
+/* ===== Sections ===== */
+/* Each section looks like a white card on the light background */
+.section {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+.section h2 {
+    color: #0b3d91;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #e5edf8;
+    padding-bottom: 0.5rem;
+}
+
+/* ===== About ===== */
+.about {
+    text-align: center;
+}
+
+/* Round profile image with blue border */
+.profile-img {
+    display: block;
+    border-radius: 50%;
+    border: 3px solid #0b3d91;
+    margin: 1rem auto;
+}
+
+/* ===== Skills ===== */
+.skills-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    max-width: 600px;
+}
+
+.skills-list dt {
+    font-weight: bold;
+    color: #0b3d91;
+}
+
+.skills-list dd {
+    margin-bottom: 0.6rem;
+    color: #4b5563;
+}
+
+/* ===== Projects ===== */
+/* Grid with auto-fit: as many cards fit, then wrap */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.2rem;
+}
+
+/* Each project card */
+.project-card {
+    border: 1px solid #e5edf8;
+    border-left: 5px solid #0b3d91;
+    border-radius: 8px;
+    padding: 1.2rem;
+    background-color: #fafcff;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+/* Card lifts on hover */
+.project-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
+}
+
+.project-card h3 {
+    color: #0b3d91;
+    margin-bottom: 0.5rem;
+}
+
+.project-card a {
+    display: inline-block;
+    margin-top: 0.6rem;
+    color: #0b3d91;
+    font-weight: bold;
+    text-decoration: none;
+    border-bottom: 1px solid #0b3d91;
+}
+
+/* ===== Contact Form ===== */
+.contact-form {
+    display: grid;
+    gap: 0.8rem;
+    max-width: 500px;
+}
+
+.contact-form label {
+    font-weight: bold;
+    color: #0b3d91;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 0.6rem;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-family: inherit;
+}
+
+/* Blue glow when you click into a field */
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: #0b3d91;
+    box-shadow: 0 0 0 3px rgba(11, 61, 145, 0.15);
+}
+
+.contact-form button {
+    padding: 0.7rem;
+    background-color: #0b3d91;
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.contact-form button:hover {
+    background-color: #062a68;
+}
+
+/* ===== Footer ===== */
+.site-footer {
+    background-color: #0b3d91;
+    color: #ffffff;
+    text-align: center;
+    padding: 1.2rem;
+    margin-top: 2rem;
+}
+
+.site-footer a {
+    color: #ffe9a8;
+    text-decoration: none;
+}
+
+/* ===== Mobile (screens 600px or smaller) ===== */
+@media (max-width: 600px) {
+
+    /* Header stacks vertically */
+    .site-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.8rem;
+        padding: 1rem;
+    }
+
+    /* Nav links stack too */
+    .main-nav ul {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    /* Smaller section padding on mobile */
+    .section {
+        margin: 1rem;
+        padding: 1.2rem;
+    }
+
+    /* Only one project card per row */
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+}
